@@ -10,8 +10,11 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PageForm (@CodeWithKliton)",
-  description: "Check my youtube channel for more content",
+  title: "EzzForms",
+  description: "User friendly drag and drop form builder",
+  icons: {
+    icon: "./favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -22,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <NextTopLoader />
           <DesignerContextProvider>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+              <link rel="icon" href="./favicon.ico" sizes="any" />
               {children}
               <Toaster />
             </ThemeProvider>
